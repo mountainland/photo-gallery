@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+
+class Photo(models.Model):
+    photo_path = models.CharField(max_length=200)
+    gallery = models.ForeignKey(Gallery, ondelete=models.CASCADE)
+    info_text = models.CharField(max_length=20)
