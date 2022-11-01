@@ -1,7 +1,7 @@
 from django.db import models
-
+from galleries.models import Gallery
 
 class Photo(models.Model):
-    photo_path = models.CharField(max_length=200)
+    photo = models.ImageField(upload_to='photos')
     gallery = models.ForeignKey(Gallery, ondelete=models.CASCADE)
     info_text = models.CharField(max_length=20)
