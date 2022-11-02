@@ -1,9 +1,0 @@
-{% if galleries_list %}
-    <ul>
-    {% for gallery in galleries_list %} %}
-        <li><a href="/galleries/{{ gallery.name }}/">{{ gallery.display_name }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No galleries are available.</p>
-{% endif %}
