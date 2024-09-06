@@ -9,17 +9,31 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
-        ('galleries', '0001_initial'),
+        ("galleries", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Photo',
+            name="Photo",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('photo', models.ImageField(upload_to='photos')),
-                ('info_text', models.CharField(max_length=20)),
-                ('gallery', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='galleries.gallery')),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("photo", models.ImageField(upload_to="photos")),
+                ("info_text", models.CharField(max_length=20)),
+                (
+                    "gallery",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="galleries.gallery",
+                    ),
+                ),
             ],
         ),
     ]
