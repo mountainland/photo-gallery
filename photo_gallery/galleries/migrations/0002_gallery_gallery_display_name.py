@@ -6,13 +6,15 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('galleries', '0001_initial'),
+        ("galleries", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='gallery',
-            name='gallery_display_name',
-            field=models.CharField(default=models.CharField(max_length=20), max_length=20),
+            model_name="gallery",
+            name="gallery_display_name",
+            field=models.CharField(
+                default=models.CharField(max_length=20), max_length=20
+            ),
         ),
     ]
